@@ -1,0 +1,269 @@
+
+/* Helpers */
+
+/* apply a natural box layout model to all elements */
+* { 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 100%;
+    line-height: 1.4; 
+	background: #c1c1c1 url(../images/body_background.png); 
+	margin: 0; 
+	padding: 0 0 2em 0; 
+}
+
+/* Page furniture */
+
+#page {
+	font-size: 1em; 
+	width: 95%; 
+	max-width: 60em; 
+	margin: 0 auto; 
+	border-radius: 0 0 1em 1em;
+	box-shadow: 0 0 20px rgba(50, 50, 50, .5);  
+	overflow: hidden;
+
+}
+	@media screen and (min-width: 58em) {  
+		#page {
+			max-width: 60em;  
+		}
+	}/* /mediaquery */
+	
+	@media screen and (min-width: 80) {  
+		#page {
+			max-width: 87.5em; 
+		}
+	}/* /mediaquery */
+
+
+header {
+	background: #bdad9c url(../images/header_background.png) no-repeat; 
+	background-size: 100%;
+	margin: 0;
+	padding: 1em 4% 0 4%; 
+	position: relative;
+	overflow: visible;
+}
+
+#main {
+	margin: 0;
+	padding: 0 0 1em 0; 
+	background: #f5f5f5;
+	background: rgba(245, 245, 245, 80); 
+	clear: both;
+}
+
+#content {
+	clear: right;
+	background-color: #f5f5f5;
+	margin: 0;
+	padding: 1em 4%; 
+	position: relative;
+}
+	@media screen and (min-width: 44em) { 
+		#content {
+			margin: 0 auto;
+			max-width: 42em;
+		}
+	}/* /mediaquery */
+
+
+footer {
+	margin: 0;
+	padding: 1em 4% 1em 4%; 
+	background-color: #73271f;
+	color: #fff; 
+}
+
+/* HTML Styles */
+
+body, caption, th, td, input, textarea, select, option, legend, fieldset {
+	font-family: "Fira Sans", helvetica, arial, sans-serif;	
+	font-weight: 300;
+}
+
+h1 {
+	font-family: "Merriweather", Georgia; 
+	font-weight: 900;
+	font-size: 2em; /* 48px / 16px = 3em */
+	line-height: 1.15em;
+	margin: 0.6667em 0 0.33333em 0; /* 24px above, 16px below */
+	color: #555; 
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
+}
+	@media screen and (min-width: 44em) { 
+		h1 {
+			font-size: 3em; 
+		}
+	}/* /mediaquery */
+
+
+h2 {
+	font-family: "Merriweather", Georgia; 
+	font-weight: 700;
+	font-size: 1.75em;
+	line-height: 1.25em;
+	margin: 0.75em 0 0.5em 0; 
+	color: #555; 
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
+}
+	@media screen and (min-width: 44em) { 
+		h2 {
+			font-size: 2em; 
+		}
+	}/* /mediaquery */
+
+
+h3 {
+	font-family: "Merriweather", Georgia; 
+	font-weight: 700;
+	font-size: 1.25em; 
+	line-height: 1.25em;
+	margin: 1em 0 0.66667em 0;
+	color: #555; 
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, .5); 
+	margin-bottom: 0;
+}
+	@media screen and (min-width: 44em) { 
+		h3 {
+			font-size: 1.5em; 
+		}
+	}/* /mediaquery */
+
+a { 
+	-webkit-transition: background 0.3s ease-in-out; 
+	-moz-transition: background 0.3s ease-in-out; 
+	-o-transition: background 0.3s ease-in-out; 
+	transition: background 0.3s ease-in-out;	
+}
+
+img {
+	width: 100%; 
+	max-width: 100%; 
+	height: auto; 
+	display: block;
+}
+
+
+/* Module styles */
+#logo {
+	width: 25%; 
+	max-width: 25%;
+	margin: 0 4% 1em 0; 
+	float: left; 
+	box-shadow: 1px 1px 1px black;
+}
+	@media screen and (min-width: 44em) { 
+		#logo {
+			width: 15%; 
+			max-width: 15%;
+		}
+	}/* /mediaquery */
+
+#logo a {
+	display: block;
+}
+
+header h1 {
+	font-style: italic;
+	margin: 0; 
+	line-height: 2em;
+}
+
+
+footer p {
+	font-size: 0.875em;  
+	line-height: 1.5em;
+	margin-top: 0.25em;
+	float: left;
+}
+
+footer ul.menu {
+	list-style: none; 
+	list-style-image: none; 
+	margin: 0; 
+	padding: 0; 
+	float: left;
+}
+
+footer ul.menu li { 
+	font-size: 0.875em; 
+	list-style: none; 
+	list-style-image: none; 
+	display: inline-block; 
+	margin: 0 .5em 0 0; 
+	padding: 0 .75em 0 0; 
+	border-right: solid 1px #fff;
+}
+
+footer ul.menu li a {
+	color: white; 
+	display: block; 
+	text-decoration: none;
+}
+
+footer ul.menu li a:hover {
+	color: #f1f1f1; 
+	text-decoration: underline;
+}
+
+.daterange {
+	font-size: .875em; 
+}
+
+
+/* figures generic styles */
+
+figure.small {
+	width: 30%; 
+	margin-bottom: 1em;
+}
+
+figure.medium {
+	width: 48%; 
+	margin-bottom: 1em;
+}
+
+figure.left {
+	float: left; 
+	margin-right: 4%; 
+}
+
+figure.right {
+	float: right; 
+	margin-left: 4%; 
+}
+
+figcaption {
+	font-size: .75em; 
+	font-style: italic;
+}
+
+
+
+
+
